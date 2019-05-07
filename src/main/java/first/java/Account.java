@@ -23,4 +23,9 @@ public class Account {
     return overdraft;
   }
 
+  public double deposit(double amount) {
+    balance += amount;
+    return balance;
+  }
+
 }
