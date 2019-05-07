@@ -16,4 +16,12 @@ public class AccountStatementTest {
     assertEquals(emptyArrayList, accountStatement.returnStatement());
   }
 
+  @Test
+  @DisplayName("returns the date string")
+  public void testAddToTransactionsReturnsDateString() {
+    AccountStatement accountStatement = new AccountStatement();
+    String testString = "07-05-2019";
+    assertEquals(testString, accountStatement.addToTransactions(0.00, 0.00));
+  }
+
 }
