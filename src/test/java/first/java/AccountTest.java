@@ -35,10 +35,18 @@ public class AccountTest {
 
   @Test
   @DisplayName("#withdraw returns correct balance")
-  public void testWithdrawReturnsBalance() {
+  public void testWithdrawReturnsCorrectBalance() {
     Account account = new Account();
     account.deposit(100.00);
     assertEquals(40.00, account.withdraw(60.00), 0.00);
+  }
+
+  @Test
+  @DisplayName("#withdraw returns correct balance when amount is over overdraft")
+  public void testWithdrawReturnsSameBalance() {
+    Account account = new Account();
+    account.deposit(100.00);
+    assertEquals(100.00, account.withdraw(110.00), 0.00);
   }
 
 }

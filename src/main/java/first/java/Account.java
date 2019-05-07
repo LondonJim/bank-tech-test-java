@@ -29,7 +29,9 @@ public class Account {
   }
 
   public double withdraw(double amount) {
-    balance -= amount;
+    if (balance - amount >= overdraft) {
+      balance -= amount;
+    };
     return balance;
   }
 
