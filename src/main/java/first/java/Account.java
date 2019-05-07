@@ -2,8 +2,8 @@ package first.java;
 
 public class Account {
 
-  double balance;
-  double overdraft;
+  private double balance;
+  private double overdraft;
 
   public Account() {
     double balance = 0.00;
@@ -13,6 +13,14 @@ public class Account {
   public Account(double balance, double overdraft) {
     this.balance = balance;
     this.overdraft = overdraft;
+  }
+
+  public double currentBalance() {
+    return balance;
+  }
+
+  public double currentOverdraft() {
+    return overdraft;
   }
 
 }
