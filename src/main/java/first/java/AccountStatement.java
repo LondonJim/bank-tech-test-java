@@ -17,12 +17,18 @@ public class AccountStatement {
     return transactions;
   }
 
-  public String addToTransactions(double amount, double balance) {
+  public void addToTransactions(double amount, double balance) {
+
+  }
+
+  public String parseCurrentDate(Date date) {
     String pattern = "dd-MM-yyyy";
     Format formatter = new SimpleDateFormat(pattern);
-    String currentDate = formatter.format(new Date());
+    String currentDate = formatter.format(date);
     return currentDate;
   }
 
-
+  public Date date() {
+    return new Date();
+  }
 }

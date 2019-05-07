@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class AccountStatementTest {
 
@@ -17,11 +18,17 @@ public class AccountStatementTest {
   }
 
   @Test
+  @DisplayName("return transactions")
+  public void testAddToTransactionsReturnsTransactions() {
+
+  }
+
+  @Test
   @DisplayName("returns the date string")
-  public void testAddToTransactionsReturnsDateString() {
+  public void testParseCurrentDateReturnsDateString() {
     AccountStatement accountStatement = new AccountStatement();
-    String testString = "07-05-2019";
-    assertEquals(testString, accountStatement.addToTransactions(0.00, 0.00));
+    Date testDate = new Date();
+    assertEquals(testDate, accountStatement.parseCurrentDate(testDate));
   }
 
 }
