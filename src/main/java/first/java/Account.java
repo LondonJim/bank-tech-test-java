@@ -28,4 +28,9 @@ public class Account {
     return balance;
   }
 
+  public double withdraw(double amount) {
+    balance -= amount;
+    return balance;
+  }
+
 }
