@@ -1,14 +1,12 @@
 package first.java;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class AccountTest {
 
   @Test
-  @DisplayName("instantiate with 0.00 balance, overdraft")
   public void testCurrentBalanceReturnsDouble() {
     Account accountOne = new Account();
     assertEquals(0.00, accountOne.currentBalance(), 0.00);
@@ -17,7 +15,6 @@ public class AccountTest {
   }
 
   @Test
-  @DisplayName("instantiate with balance and overdraft")
   public void testCurrentOverdraftReturnsDouble() {
     Account accountOne = new Account();
     assertEquals(0.00, accountOne.currentOverdraft(), 0.00);
@@ -26,7 +23,6 @@ public class AccountTest {
   }
 
   @Test
-  @DisplayName("#deposit returns correct balance")
   public void testDepositReturnsBalance() {
     Account account = new Account();
     assertEquals(90.99, account.deposit(90.99), 0.00);
@@ -34,7 +30,6 @@ public class AccountTest {
   }
 
   @Test
-  @DisplayName("#withdraw returns correct balance")
   public void testWithdrawReturnsCorrectBalance() {
     Account account = new Account();
     account.deposit(100.00);
@@ -42,7 +37,6 @@ public class AccountTest {
   }
 
   @Test
-  @DisplayName("#withdraw returns correct balance when amount is over overdraft")
   public void testWithdrawReturnsSameBalance() {
     Account account = new Account();
     account.deposit(100.00);
