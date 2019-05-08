@@ -8,15 +8,9 @@ import java.text.Format;
 public class AccountStatement {
 
   private ArrayList transactions = new ArrayList<>();
-  private DisplayStatement displayStatement;
 
   public AccountStatement() {
     ArrayList transactions[];
-    DisplayStatement displayStatement = DisplayStatement.getInstance();
-  }
-
-  public ArrayList returnStatement() {
-    return transactions;
   }
 
   public String addToTransactions(double amount, double balance) {
@@ -34,8 +28,8 @@ public class AccountStatement {
   }
 
   public String displayStatement() {
-    // static method in class .DisplayStatement
-    return displayStatement.display(transactions);
+    // static method in .DisplayStatement
+    return DisplayStatement.display(transactions);
   }
 
   public String parseCurrentDate() {

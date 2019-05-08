@@ -10,14 +10,6 @@ import java.util.Date;
 
 public class AccountStatementTest {
 
-  // #returnStatement
-  @Test
-  public void testAccountStatementInstantiatesWithArray() {
-    AccountStatement accountStatement = new AccountStatement();
-    ArrayList emptyArrayList = new ArrayList<>();
-    assertEquals(emptyArrayList, accountStatement.returnStatement());
-  }
-
   // #addToTransactions
   @Test
   public void testAddToTransactionsReturnsLastTransactions() {

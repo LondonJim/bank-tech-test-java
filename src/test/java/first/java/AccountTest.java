@@ -67,7 +67,7 @@ public class AccountTest {
     assertEquals("26-10-1986 || 100.0 || || 100.0", account.statementUpdate(100.00, 100.00));
   }
 
-  // #statementUpdate
+  // #displayStatement
   @Test
   public void testDisplayStatementReturnsString() {
     Account account = new Account(accountStatementMock);
