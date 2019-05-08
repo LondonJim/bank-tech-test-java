@@ -15,6 +15,8 @@ public class AccountTest {
     accountStatementMock = mock(AccountStatement.class);
     when(accountStatementMock.addToTransactions(100.00, 100.00))
       .thenReturn("26-10-1986 || 100.0 || || 100.0");
+    when(accountStatementMock.displayStatement())
+      .thenReturn("Date || credit || debit || balance \n26-10-1986 || 100.0 || || 100.0");
   }
 
   // .Account instantiation #currentBalance
@@ -65,4 +67,10 @@ public class AccountTest {
     assertEquals("26-10-1986 || 100.0 || || 100.0", account.statementUpdate(100.00, 100.00));
   }
 
+  // #statementUpdate
+  @Test
+  public void testDisplayStatementReturnsString() {
+    Account account = new Account(accountStatementMock);
+    assertEquals("Date || credit || debit || balance \n26-10-1986 || 100.0 || || 100.0", account.displayStatement());
+  }
 }

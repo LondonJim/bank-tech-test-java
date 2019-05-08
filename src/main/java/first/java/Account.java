@@ -50,4 +50,8 @@ public class Account {
     return accountStatement.addToTransactions(amount, balance);
   }
 
+  public String displayStatement() {
+    return accountStatement.displayStatement();
+  }
+
 }

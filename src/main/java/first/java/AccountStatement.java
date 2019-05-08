@@ -27,8 +27,12 @@ public class AccountStatement {
     } else {
       transactions.add(currentDate + " || || " + balanceStr.substring(1) + " || " + balanceStr);
     }
-    
+
     return String.valueOf(transactions.get(transactions.size() -1));
+  }
+
+  public String displayStatement() {
+    return "test";
   }
 
   public String parseCurrentDate() {
