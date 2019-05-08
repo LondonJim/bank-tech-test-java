@@ -15,8 +15,8 @@ public class AccountStatementTest {
   public void testAddToTransactionsReturnsLastTransactions() {
     AccountStatement accountStatement = new AccountStatement();
     AccountStatement accountStatementMock = spy(AccountStatement.class);
-    when(accountStatementMock.parseCurrentDate()).thenReturn("26-10-1986");
-    assertEquals("26-10-1986 || 100.0 || || 100.0", accountStatementMock.addToTransactions(100.00, 100.00));
+    when(accountStatementMock.parseCurrentDate()).thenReturn("26/10/1986");
+    assertEquals("26/10/1986 || 100.0 || || 100.0", accountStatementMock.addToTransactions(100.00, 100.00));
   }
 
   // #parseCurrentDate
@@ -26,7 +26,7 @@ public class AccountStatementTest {
     AccountStatement accountStatementMock = spy(AccountStatement.class);
     Date date = new Date(85, 9, 26);
     when(accountStatementMock.returnDate()).thenReturn(date);
-    assertEquals("26-10-1985", accountStatementMock.parseCurrentDate());
+    assertEquals("26/10/1985", accountStatementMock.parseCurrentDate());
   }
 
 }

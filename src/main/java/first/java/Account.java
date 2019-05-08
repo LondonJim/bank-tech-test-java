@@ -25,10 +25,12 @@ public class Account {
   }
 
   public double currentBalance() {
+    System.out.println(balance);
     return balance;
   }
 
   public double currentOverdraft() {
+    System.out.println(overdraft);
     return overdraft;
   }
 
@@ -51,7 +53,9 @@ public class Account {
   }
 
   public String displayStatement() {
-    return accountStatement.displayStatement();
+    String returnedStatement = accountStatement.displayStatement();
+    System.out.println(returnedStatement);
+    return returnedStatement;
   }
 
 }

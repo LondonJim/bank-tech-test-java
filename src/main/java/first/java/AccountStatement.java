@@ -34,7 +34,7 @@ public class AccountStatement {
 
   public String parseCurrentDate() {
     Date date = returnDate();
-    String pattern = "dd-MM-yyyy";
+    String pattern = "dd/MM/yyyy";
     Format formatter = new SimpleDateFormat(pattern);
     String currentDate = formatter.format(date);
     return currentDate;
