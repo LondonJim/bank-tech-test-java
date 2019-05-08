@@ -2,15 +2,24 @@ package first.java;
 
 public class Account {
 
+  private AccountStatement accountStatement = new AccountStatement();
   private double balance;
   private double overdraft;
 
   public Account() {
+    AccountStatement accountStatement = new AccountStatement();
     double balance = 0.00;
     double overdraft = 0.00;
   }
 
-  public Account(double balance, double overdraft) {
+  public Account(AccountStatement accountStatement) {
+    this.accountStatement = accountStatement;
+    double balance = 0.00;
+    double overdraft = 0.00;
+  }
+
+  public Account(AccountStatement accountStatement, double balance, double overdraft) {
+    this.accountStatement = accountStatement;
     this.balance = balance;
     this.overdraft = overdraft;
   }
@@ -25,14 +34,20 @@ public class Account {
 
   public double deposit(double amount) {
     balance += amount;
+    statementUpdate(amount, balance);
     return balance;
   }
 
   public double withdraw(double amount) {
     if (balance - amount >= overdraft) {
       balance -= amount;
+      statementUpdate(-amount, balance);
     };
     return balance;
+  }
+
+  public void statementUpdate(double amount, double balance) {
+    accountStatement.addToTransactions(amount, balance);
   }
 
 }
