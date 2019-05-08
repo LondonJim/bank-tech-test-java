@@ -17,6 +17,7 @@ public class AccountTest {
       .thenReturn("26-10-1986 || 100.0 || || 100.0");
   }
 
+  // .Account instantiation #currentBalance
   @Test
   public void testCurrentBalanceReturnsDouble() {
     Account accountOne = new Account(accountStatementMock);
@@ -25,6 +26,7 @@ public class AccountTest {
     assertEquals(100.00, accountTwo.currentBalance(), 0.00);
   }
 
+  // .Account instantiation #currentOverdraft
   @Test
   public void testCurrentOverdraftReturnsDouble() {
     Account accountOne = new Account(accountStatementMock);
@@ -33,6 +35,7 @@ public class AccountTest {
     assertEquals(200.00, accountTwo.currentOverdraft(), 0.00);
   }
 
+  // #deposit
   @Test
   public void testDepositReturnsBalance() {
     Account account = new Account(accountStatementMock);
@@ -40,6 +43,7 @@ public class AccountTest {
     assertEquals(100.99, account.deposit(10.00), 0.00);
   }
 
+  // #withdraw
   @Test
   public void testWithdrawReturnsCorrectBalance() {
     Account account = new Account(accountStatementMock);
@@ -52,6 +56,13 @@ public class AccountTest {
     Account account = new Account(accountStatementMock);
     account.deposit(100.00);
     assertEquals(100.00, account.withdraw(110.00), 0.00);
+  }
+
+  // #statementUpdate
+  @Test
+  public void testStatementUpdateReturnsString() {
+    Account account = new Account(accountStatementMock);
+    assertEquals("26-10-1986 || 100.0 || || 100.0", account.statementUpdate(100.00, 100.00));
   }
 
 }
