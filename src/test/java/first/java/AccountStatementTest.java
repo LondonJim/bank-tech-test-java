@@ -10,6 +10,7 @@ import java.util.Date;
 
 public class AccountStatementTest {
 
+  // #returnStatement
   @Test
   public void testAccountStatementInstantiatesWithArray() {
     AccountStatement accountStatement = new AccountStatement();
@@ -17,6 +18,7 @@ public class AccountStatementTest {
     assertEquals(emptyArrayList, accountStatement.returnStatement());
   }
 
+  // #addToTransactions
   @Test
   public void testAddToTransactionsReturnsLastTransactions() {
     AccountStatement accountStatement = new AccountStatement();
@@ -25,6 +27,7 @@ public class AccountStatementTest {
     assertEquals("26-10-1986 || 100.0 || || 100.0", accountStatementMock.addToTransactions(100.00, 100.00));
   }
 
+  // #parseCurrentDate
   @Test
   public void testParseCurrentDateReturnsDateString() {
     AccountStatement accountStatement = new AccountStatement();
