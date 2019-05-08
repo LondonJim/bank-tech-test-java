@@ -45,7 +45,6 @@ jshell --class-path ./build/libs/first-java.jar
 jshell> import first.java.Account;
 jshell> Account account = new Account();
 ```
-example return `account ==> first.java.Account@1a86f2f1`
 
 #### Add funds
 ```
@@ -87,9 +86,6 @@ View test reports in the browser
 ```
 ./build/reports/tests/test/index.html
 ```
-
-
-
 
 ### User Stories
 
