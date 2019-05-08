@@ -13,7 +13,8 @@ public class AccountTest {
   @Before
   public void setUp() {
     accountStatementMock = mock(AccountStatement.class);
-    when(accountStatementMock.addToTransactions(100.00, 100.00)).thenReturn(null);
+    when(accountStatementMock.addToTransactions(100.00, 100.00))
+      .thenReturn("26-10-1986 || 100.0 || || 100.0");
   }
 
   @Test

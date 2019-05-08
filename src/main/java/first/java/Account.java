@@ -46,8 +46,8 @@ public class Account {
     return balance;
   }
 
-  public void statementUpdate(double amount, double balance) {
-    accountStatement.addToTransactions(amount, balance);
+  public String statementUpdate(double amount, double balance) {
+    return accountStatement.addToTransactions(amount, balance);
   }
 
 }
