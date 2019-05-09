@@ -88,6 +88,8 @@ View test reports in the browser
 ./build/reports/tests/test/index.html
 ```
 
+![Tests Screen Shot](./public/screen-shot-tests.png)
+
 ### User Stories
 
 ```
@@ -115,4 +117,3 @@ As a customer,
 so I can see my transactions,
 I want to be able to view an account statement
 ```
-![Tests Screen Shot](./public/screen-shot-tests.png)
