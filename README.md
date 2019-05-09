@@ -115,3 +115,4 @@ As a customer,
 so I can see my transactions,
 I want to be able to view an account statement
 ```
+![Tests Screen Shot](./public/screen-shot-tests.png)
