@@ -2,20 +2,20 @@ package first.java;
 
 public class Account {
 
-  private AccountStatement accountStatement = new AccountStatement();
+  private AccountStatement accountStatement;
   private double balance;
   private double overdraft;
 
   public Account() {
-    AccountStatement accountStatement = new AccountStatement();
-    double balance = 0.00;
-    double overdraft = 0.00;
+    this.accountStatement = new AccountStatement();
+    this.balance = 0.00;
+    this.overdraft = 0.00;
   }
 
   public Account(AccountStatement accountStatement) {
     this.accountStatement = accountStatement;
-    double balance = 0.00;
-    double overdraft = 0.00;
+    this.balance = 0.00;
+    this.overdraft = 0.00;
   }
 
   public Account(AccountStatement accountStatement, double balance, double overdraft) {
